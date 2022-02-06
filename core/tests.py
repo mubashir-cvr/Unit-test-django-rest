@@ -1,3 +1,7 @@
 from django.test import TestCase
 
-# Create your tests here.
+from rest_framework.test import APIClient
+from django.urls import reverse
+from .models import Person
+
+
