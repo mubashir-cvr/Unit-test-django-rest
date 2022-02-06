@@ -9,5 +9,5 @@ class Person(models.Model):
     type=models.CharField(max_length=225)
     age=models.IntegerField(max_length=225)
     description=models.CharField(max_length=225)
-    description=models.CharField(max_length=225)
+    date=models.DateTimeField()
 
