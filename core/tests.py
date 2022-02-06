@@ -36,3 +36,16 @@ class PrivatePersonApiTests(TestCase):
         self.assertEqual(res.data, serializer.data)
 
    
+
+    def test_create_person_successful(self):
+        payload = {'checked':True,'name': 'Simple','type':'Type1','age':23,'description':'description1','date':datetime.datetime.now()}
+        self.client.post(PERSON_URL, payload)
+
+        exists = Person.objects.filter(
+            name=payload['name']
+        ).exists()
+        self.assertTrue(exists)
+
+  
+
+
