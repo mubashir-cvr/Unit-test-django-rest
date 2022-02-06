@@ -6,7 +6,7 @@ from . import serializers
 
 
 
-class RecipeViewSet(viewsets.ModelViewSet):
+class PersonViewSet(viewsets.ModelViewSet):
     """Manage recipes in the database"""
     serializer_class = serializers.PersonSerializer
     queryset = Person.objects.all()
